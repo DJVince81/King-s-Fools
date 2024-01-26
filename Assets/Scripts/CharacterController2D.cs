@@ -55,6 +55,9 @@ public class CharacterController2D : MonoBehaviour
     private int animatorRunningSpeed;
     private int animatorJumpTrigger;
 
+    private Vector2 mvmntInput;
+    private bool jmpInput;
+
     public bool CanMove { get; set; }
 
     void Start()
@@ -92,27 +95,22 @@ public class CharacterController2D : MonoBehaviour
         CanMove = true;
     }
 
-    void Update()
+    private void Update()
     {
-        var keyboard = Keyboard.current;
-
-        if (!CanMove || keyboard == null)
+        if (!CanMove)
             return;
 
         // Horizontal movement
-        float moveHorizontal = 0.0f;
-
-        if (keyboard.leftArrowKey.isPressed || keyboard.aKey.isPressed)
-            moveHorizontal = -1.0f;
-        else if (keyboard.rightArrowKey.isPressed || keyboard.dKey.isPressed)
-            moveHorizontal = 1.0f;
-
-        movementInput = new Vector2(moveHorizontal, 0);
+        movementInput = new Vector2(mvmntInput.x, 0);
 
         // Jumping input
-        if (!isJumping && keyboard.spaceKey.wasPressedThisFrame)
-            jumpInput = true;
+        if (!isJumping)
+            jumpInput = jmpInput;
     }
+
+    public void OnMove(InputAction.CallbackContext callbackContext) => mvmntInput = callbackContext.ReadValue<Vector2>();
+
+    public void OnJump(InputAction.CallbackContext callbackContext) => jmpInput = callbackContext.ReadValueAsButton();
 
     void FixedUpdate()
     {
@@ -162,7 +160,8 @@ public class CharacterController2D : MonoBehaviour
         animator.SetFloat(animatorRunningSpeed, horizontalSpeedNormalized);
 
         // Play audio
-        audioPlayer.PlaySteps(groundType, horizontalSpeedNormalized);
+        if(audioPlayer != null)
+            audioPlayer.PlaySteps(groundType, horizontalSpeedNormalized);
     }
 
     private void UpdateJump()
@@ -187,7 +186,8 @@ public class CharacterController2D : MonoBehaviour
             isJumping = true;
 
             // Play audio
-            audioPlayer.PlayJump();
+            if(audioPlayer != null)
+                audioPlayer.PlayJump();
         }
 
         // Landed
@@ -205,7 +205,8 @@ public class CharacterController2D : MonoBehaviour
             isFalling = false;
 
             // Play audio
-            audioPlayer.PlayLanding(groundType);
+            if(audioPlayer != null)
+                audioPlayer.PlayLanding(groundType);
         }
     }
 
