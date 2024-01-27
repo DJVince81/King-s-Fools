@@ -1,5 +1,5 @@
 {
-    "name": "Actions",
+    "name": "FoolsActions",
     "maps": [
         {
             "name": "FoolsGameplay",
@@ -216,6 +216,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Trap5",
+                    "type": "Button",
+                    "id": "7f1bf412-8549-4664-9760-3d9aa616df03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap6",
+                    "type": "Button",
+                    "id": "722417ed-6bc1-480f-921f-6445a2224b06",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap7",
+                    "type": "Button",
+                    "id": "a19a61d2-de2f-4348-98ce-44afbda7a657",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap8",
+                    "type": "Button",
+                    "id": "aac2043f-c973-4482-b86b-bd26543689cc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -265,8 +301,8 @@
                 },
                 {
                     "name": "",
-                    "id": "70990f36-e6d4-4fa3-9533-94e2ab2fc002",
-                    "path": "<Gamepad>/buttonNorth",
+                    "id": "08786469-3a3c-4ae5-98cc-75690296138b",
+                    "path": "<Gamepad>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -287,8 +323,8 @@
                 },
                 {
                     "name": "",
-                    "id": "08786469-3a3c-4ae5-98cc-75690296138b",
-                    "path": "<Gamepad>/dpad/left",
+                    "id": "70990f36-e6d4-4fa3-9533-94e2ab2fc002",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -304,6 +340,138 @@
                     "processors": "",
                     "groups": "",
                     "action": "Trap4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ffcae73-c64d-41a4-a3ef-52c5d194ccbb",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5e61379-5fcd-4803-b916-f3a0df87fdfc",
+                    "path": "<XInputController>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0cc655c5-f98b-4c47-826d-86b57e82730b",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Trap5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa54ec3b-9e26-4f06-8abc-f5886b6a6eeb",
+                    "path": "<XInputController>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ec3bf01f-25b2-4dc7-a151-ad3a1fc93493",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b456c1b-4f9a-4ab7-85eb-db7fc33b4b57",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Trap7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3af48d60-e1f2-4d85-9e47-752a24e85131",
+                    "path": "<XInputController>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "951655b2-9a0d-448c-b3f2-f0095f74330d",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be107866-6460-4305-b0e5-503c40487c45",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Trap8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a4b884b4-7da7-42be-90b3-86168ea616b0",
+                    "path": "<XInputController>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "07a33384-84e3-4a67-86f5-c939258ee954",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Trap6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "465960fb-2537-48b3-b6ed-c6bff00ed621",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Trap6",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

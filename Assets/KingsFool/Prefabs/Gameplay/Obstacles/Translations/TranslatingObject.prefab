@@ -74,6 +74,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8348763932646059297}
   - component: {fileID: 6371875403965391492}
+  - component: {fileID: 7120126236723661397}
   m_Layer: 0
   m_Name: TranslatingObject
   m_TagString: Untagged
@@ -116,6 +117,51 @@ MonoBehaviour:
   speed: 1
   AutomaticLiftingDelay: 1
   invisibleDuringTheLiffing: 0
+--- !u!61 &7120126236723661397
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6707106873934981037}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &6858651235941667415
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,10 +171,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2452301843369518951}
+  - component: {fileID: 7437219203163401819}
   - component: {fileID: 649557290660385271}
   - component: {fileID: 5577752735972585726}
   - component: {fileID: 6057081180082973134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,6 +197,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2867443552866111751}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7437219203163401819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6858651235941667415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7c15e03c023454abd5eae924a91819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 6371875403965391492}
 --- !u!212 &649557290660385271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -210,7 +270,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6858651235941667415}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
