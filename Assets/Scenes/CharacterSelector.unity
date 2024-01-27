@@ -480,6 +480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bbeb17b5d355b4bbe958f1603488be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FoolPlayer: {fileID: 2638879086307866348, guid: 8536eef0a5c281642b45c61fc2f8e7e6,
+    type: 3}
+  KingPlayer: {fileID: 2638879086307866348, guid: 8536eef0a5c281642b45c61fc2f8e7e6,
+    type: 3}
 --- !u!4 &892149954
 Transform:
   m_ObjectHideFlags: 0
