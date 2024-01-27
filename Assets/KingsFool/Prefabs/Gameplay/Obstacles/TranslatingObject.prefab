@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 8348763932646059297}
   - component: {fileID: 6371875403965391492}
   m_Layer: 0
-  m_Name: TranslationObject
+  m_Name: TranslatingObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

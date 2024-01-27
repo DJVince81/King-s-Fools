@@ -1,9 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-
-
-public class RotateObject : Obstacles
+public class RotatingObject : Obstacle
 {
     public GameObject body;
     public float angleTarget = 90, rotationSpeed = 1.0f;
