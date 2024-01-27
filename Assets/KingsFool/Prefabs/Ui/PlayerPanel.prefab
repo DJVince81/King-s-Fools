@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57801914793786e45aaa3d84a744a003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 0
+  isDisconnected: 0
   playerNumberText: {fileID: 6830150503371734463}
   controllerText: {fileID: 8809823564112483612}
 --- !u!114 &14564008062496214
@@ -467,6 +467,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f02d7195-f40b-49fc-bf66-42fcb424f7f3
     m_ActionName: FoolsGameplay/ENTER[/Keyboard/enter]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 56087343-64d9-4aae-be0a-2a0fb6898904
+    m_ActionName: KingGameplay/Trap1[/XInputControllerWindows/buttonSouth,/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b86aaff8-2068-40f8-8bfa-8c74f3806f16
+    m_ActionName: KingGameplay/Trap2[/XInputControllerWindows/buttonEast,/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 57e3c8f4-ec62-453a-a863-18fc18c8f088
+    m_ActionName: KingGameplay/Trap3[/XInputControllerWindows/buttonNorth,/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 149363de-764a-418d-8b1d-e0dbf4fda236
+    m_ActionName: KingGameplay/Trap4[/XInputControllerWindows/dpad/left,/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: FoolsGameplay

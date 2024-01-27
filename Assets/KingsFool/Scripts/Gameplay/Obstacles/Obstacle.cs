@@ -11,13 +11,12 @@ public abstract class Obstacle : MonoBehaviour
             if (isVisible != value)
             {
                 isVisible = value;
+                Debug.Log("Obstacle " + gameObject.name + " is now " + (isVisible ? "visible" : "invisible"));
                 ObstacleVisibilityChanged?.Invoke(this, EventArgs.Empty);
             }
         }
     }
     private bool isVisible;
-
-    [SerializeField] private Renderer bodyRenderer;
     public event EventHandler ObstacleVisibilityChanged;
 
     protected bool isActivated;

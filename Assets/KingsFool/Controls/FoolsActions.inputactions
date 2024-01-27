@@ -1,5 +1,5 @@
 {
-    "name": "FoolsActions",
+    "name": "Actions",
     "maps": [
         {
             "name": "FoolsGameplay",
@@ -172,6 +172,138 @@
                     "processors": "",
                     "groups": "Keyboard",
                     "action": "ENTER",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "KingGameplay",
+            "id": "c50a101f-bff9-45b7-a41a-2987e05218ce",
+            "actions": [
+                {
+                    "name": "Trap1",
+                    "type": "Button",
+                    "id": "56087343-64d9-4aae-be0a-2a0fb6898904",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap2",
+                    "type": "Button",
+                    "id": "b86aaff8-2068-40f8-8bfa-8c74f3806f16",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap3",
+                    "type": "Button",
+                    "id": "57e3c8f4-ec62-453a-a863-18fc18c8f088",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Trap4",
+                    "type": "Button",
+                    "id": "149363de-764a-418d-8b1d-e0dbf4fda236",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4e8e58e2-bc47-4c85-b1af-451c5bfdf330",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9540f5c4-ed88-4204-8f37-81e960c0daea",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4ce84f7-2aea-4cbd-9cdf-dcc8d5dc4fca",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fe705285-319c-4d64-9bff-e522589d56c3",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "70990f36-e6d4-4fa3-9533-94e2ab2fc002",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e1ac6c7a-92d8-4307-a32a-e0bf85df12cd",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08786469-3a3c-4ae5-98cc-75690296138b",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb006f19-71b6-4925-a696-a220ac5ac461",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Trap4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
