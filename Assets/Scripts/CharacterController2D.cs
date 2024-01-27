@@ -160,7 +160,7 @@ public class CharacterController2D : MonoBehaviour
         animator.SetFloat(animatorRunningSpeed, horizontalSpeedNormalized);
 
         // Play audio
-        if(audioPlayer != null)
+        if (audioPlayer != null)
             audioPlayer.PlaySteps(groundType, horizontalSpeedNormalized);
     }
 
@@ -186,7 +186,7 @@ public class CharacterController2D : MonoBehaviour
             isJumping = true;
 
             // Play audio
-            if(audioPlayer != null)
+            if (audioPlayer != null)
                 audioPlayer.PlayJump();
         }
 
@@ -205,7 +205,7 @@ public class CharacterController2D : MonoBehaviour
             isFalling = false;
 
             // Play audio
-            if(audioPlayer != null)
+            if (audioPlayer != null)
                 audioPlayer.PlayLanding(groundType);
         }
     }
@@ -246,7 +246,7 @@ public class CharacterController2D : MonoBehaviour
         if (groundType == GroundType.None)
         {
             // If not grounded then set the gravity scale according to upwards (jump) or downwards (falling) motion.
-            gravityScale = controllerRigidbody.velocity.y > 0.0f ? jumpGravityScale : fallGravityScale;           
+            gravityScale = controllerRigidbody.velocity.y > 0.0f ? jumpGravityScale : fallGravityScale;
         }
 
         controllerRigidbody.gravityScale = gravityScale;

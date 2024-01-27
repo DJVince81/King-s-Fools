@@ -22,12 +22,13 @@ public class PlayerPanel : MonoBehaviour
 
     public void Initialize(int playerNumber)
     {
-        player = new Player(playerNumber, playerInput);
+        InputDevice inputDevice = playerInput.devices[0];
+        player = new Player(playerNumber, inputDevice);
         player.PlayerChanged += OnPlayerChanged;
-        GameManager.Instance.AddPlayer(playerInput, player);
+        GameManager.Instance.AddPlayer(inputDevice, player);
         player.PlayerNumber = playerNumber;
         playerNumberText.text = $"Player {playerNumber}";
-        controllerText.text = playerInput.devices[0].name;
+        controllerText.text = inputDevice.name;
     }
 
     private void ChangeTextColor(bool isKing)

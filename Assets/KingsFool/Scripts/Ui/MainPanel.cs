@@ -33,7 +33,7 @@ public class MainPanel : MonoBehaviour
     private IEnumerator<WaitForSeconds> WaitAndRemovePlayerPanel(PlayerPanel playerPanel)
     {
         yield return new WaitForSeconds(0.1f);
-        GameManager.Instance.RemovePlayer(playerPanel.player.PlayerInput);
+        GameManager.Instance.RemovePlayer(playerPanel.player.InputDevice);
         playerPanels.Remove(playerPanel);
         Destroy(playerPanel.gameObject);
         for (int i = 0; i < playerPanels.Count; i++)

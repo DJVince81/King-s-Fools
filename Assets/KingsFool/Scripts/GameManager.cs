@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     private bool oneTime = true;
 
-    private Dictionary<PlayerInput, Player> players;
+    private Dictionary<InputDevice, Player> players;
 
     private void Awake()
     {
@@ -22,21 +22,21 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            players = new Dictionary<PlayerInput, Player>();
+            players = new Dictionary<InputDevice, Player>();
             DontDestroyOnLoad(gameObject);
         }
         else
             Destroy(gameObject);
     }
 
-    public void AddPlayer(PlayerInput playerInput, Player player)
+    public void AddPlayer(InputDevice InputDevice, Player player)
     {
-        players.Add(playerInput, player);
+        players.Add(InputDevice, player);
     }
 
-    public void RemovePlayer(PlayerInput playerInput)
+    public void RemovePlayer(InputDevice InputDevice)
     {
-        players.Remove(playerInput);
+        players.Remove(InputDevice);
     }
 
     public void LaunchNewGame()
@@ -69,15 +69,17 @@ public class GameManager : MonoBehaviour
             CinemachineTargetGroup cinemachine = cinemachineTargetGroup.AddComponent<CinemachineTargetGroup>();
             for (int i = 0; i < players.Count; i++)
             {
-                bool isKing = players.ElementAt(i).Value.IsKing;
+                Player player = players.ElementAt(i).Value;
+                bool isKing = player.IsKing;
                 GameObject newPlayer = Instantiate(isKing ? Instance.KingPlayer : Instance.FoolPlayer);
                 newPlayer.name = (isKing ? "King" : "Fool") + (i + 1);
+                // Sets the device of the player
+                newPlayer.GetComponent<PlayerInput>().SwitchCurrentControlScheme(player.InputDevice);
                 if (!isKing)
                 {
                     cinemachine.AddMember(newPlayer.transform, 1f, 3f);
                 }
             }
-            // SceneManager.MoveGameObjectToScene(cinemachineTargetGroup, scene);
 
             // Se d�sabonner de l'�v�nement apr�s l'avoir g�r�
             SceneManager.sceneLoaded -= OnSceneLoaded;

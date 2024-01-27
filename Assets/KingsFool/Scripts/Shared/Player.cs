@@ -19,19 +19,19 @@ public class Player
     }
     private int playerNumber;
 
-    public PlayerInput PlayerInput
+    public InputDevice InputDevice
     {
-        get => playerInput;
+        get => inputDevice;
         set
         {
-            if (playerInput != value)
+            if (inputDevice != value)
             {
-                playerInput = value;
+                inputDevice = value;
                 PlayerChanged?.Invoke(this, EventArgs.Empty);
             }
         }
     }
-    private PlayerInput playerInput;
+    private InputDevice inputDevice;
 
     public bool IsKing
     {
@@ -47,10 +47,10 @@ public class Player
     }
     private bool isKing;
 
-    public Player(int playerNumber, PlayerInput playerInput)
+    public Player(int playerNumber, InputDevice inputDevice)
     {
         PlayerNumber = playerNumber;
-        PlayerInput = playerInput;
+        InputDevice = inputDevice;
         IsKing = false;
     }
 
