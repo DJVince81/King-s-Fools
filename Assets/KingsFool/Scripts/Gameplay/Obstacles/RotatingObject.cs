@@ -5,7 +5,7 @@ using UnityEngine;
 public class RotatingObject : Obstacle
 {
     public GameObject body;
-    public bool directionToLeft = false;
+    public bool inverseDirection = false;
 
     public float delayReset = 1f;
     public float angleTarget = 90, rotationSpeed = 1.0f;
@@ -14,7 +14,7 @@ public class RotatingObject : Obstacle
 
     public IEnumerator Rotate()
     {
-        float directionMultiplier = directionToLeft ? -1 : 1;
+        float directionMultiplier = inverseDirection ? -1 : 1;
         float angle = 0.0f;
         while (angle < angleTarget)
         {
@@ -53,5 +53,10 @@ public class RotatingObject : Obstacle
     public override void Activate()
     {
         isActivated = true;
+        GetComponent<BoxCollider2D>().enabled = true;
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
     }
 }
