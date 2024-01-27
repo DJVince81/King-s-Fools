@@ -5,6 +5,7 @@ public class ObstaclesManager : MonoBehaviour
 {
     public static ObstaclesManager Instance;
     private List<Obstacle> obstacles;
+    private List<Obstacle> visibleObstacles;
 
     private void Awake()
     {
@@ -27,11 +28,23 @@ public class ObstaclesManager : MonoBehaviour
         }
     }
 
-    public void ActivateObstacles()
+    public void ActivateObstacle(int index)
     {
-        foreach (Obstacle obstacle in obstacles)
-        {
-            obstacle.Activate();
-        }
+        if (index < 0 || index >= obstacles.Count)
+            return;
+        visibleObstacles[index].Activate();
+    }
+
+    public void OnObstacleVisibilityChanged(object sender, System.EventArgs e)
+    {
+        Obstacle obstacle = (Obstacle)sender;
+        if (obstacle.IsVisible)
+            visibleObstacles.Add(obstacle);
+        else
+            visibleObstacles.Remove(obstacle);
+
+        Debug.Log("Visible obstacles:");
+        for (int i = 0; i < visibleObstacles.Count; i++)
+            Debug.Log(i + ": " + visibleObstacles[i].gameObject.name);
     }
 }

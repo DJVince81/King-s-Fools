@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class King : MonoBehaviour
 {
-    public void OnButtonsPressed()
+    public void OnButtonPressed(int index)
     {
-        ObstaclesManager.Instance.ActivateObstacles();
+
     }
 }

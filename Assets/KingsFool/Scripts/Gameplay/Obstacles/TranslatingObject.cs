@@ -65,10 +65,4 @@ public class TranslatingObject : Obstacle
             StartCoroutine(Descent());
         }
     }
-
-
-    public override void Activate()
-    {
-        isActivated = true;
-    }
 }
