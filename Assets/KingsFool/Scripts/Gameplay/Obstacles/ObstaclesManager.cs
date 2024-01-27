@@ -4,6 +4,8 @@ using UnityEngine;
 public class ObstaclesManager : MonoBehaviour
 {
     public static ObstaclesManager Instance;
+
+    [SerializeField] DebugText debugText;
     private List<Obstacle> obstacles;
     private List<Obstacle> visibleObstacles;
 
@@ -13,6 +15,7 @@ public class ObstaclesManager : MonoBehaviour
         {
             Instance = this;
             obstacles = new List<Obstacle>();
+            visibleObstacles = new List<Obstacle>();
         }
         else
             Destroy(gameObject);
@@ -22,16 +25,19 @@ public class ObstaclesManager : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            GameObject obstacle = child.gameObject;
-            if (obstacle.GetComponent<Obstacle>() != null)
-                obstacles.Add(obstacle.GetComponent<Obstacle>());
+            GameObject go = child.gameObject;
+            if (go.GetComponent<Obstacle>() != null)
+            {
+                Obstacle obstacle = go.GetComponent<Obstacle>();
+                obstacle.ObstacleVisibilityChanged += OnObstacleVisibilityChanged;
+                obstacles.Add(obstacle);
+            }
         }
     }
 
     public void ActivateObstacle(int index)
     {
-        if (index < 0 || index >= obstacles.Count)
-            return;
+        if (index < 0 || index >= obstacles.Count) return;
         visibleObstacles[index].Activate();
     }
 
@@ -43,8 +49,6 @@ public class ObstaclesManager : MonoBehaviour
         else
             visibleObstacles.Remove(obstacle);
 
-        Debug.Log("Visible obstacles:");
-        for (int i = 0; i < visibleObstacles.Count; i++)
-            Debug.Log(i + ": " + visibleObstacles[i].gameObject.name);
+        debugText.DisplayObstaclesList(visibleObstacles.ToArray());
     }
 }
