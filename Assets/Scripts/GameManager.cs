@@ -1,5 +1,6 @@
-using Cinemachine;
 using System.Collections.Generic;
+using System.Linq;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -13,29 +14,24 @@ public class GameManager : MonoBehaviour
 
     private bool oneTime = true;
 
-    private static Dictionary<int, PlayerInput> players;
+    private Dictionary<PlayerInput, Player> players;
 
     private void Awake()
     {
+        Random.InitState(System.DateTime.Now.Millisecond);
         if (Instance == null)
         {
             Instance = this;
+            players = new Dictionary<PlayerInput, Player>();
             DontDestroyOnLoad(gameObject);
         }
         else
             Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void AddPlayer(PlayerInput playerInput, Player player)
     {
-        players = new Dictionary<int, PlayerInput>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        players.Add(playerInput, player);
     }
 
     public void LaunchNewGame()
@@ -43,41 +39,40 @@ public class GameManager : MonoBehaviour
         if (oneTime)
         {
             oneTime = false;
-            players.Clear();
-            for (int i = 0; i < MainPanel.Instance.nbPlayer; i++)
-            {
-                players.Add(i, MainPanel.Instance.transform.GetChild(i).GetComponent<PlayerInput>());
-            }
-            if (MainPanel.Instance.nbPlayer >= 3)
+            ChooseRandomKing();
+            if (players.Count >= 2)
             {
                 SceneManager.sceneLoaded += OnSceneLoaded;
                 SceneManager.LoadScene("Main");
             }
-            Invoke("ResetOneTime", 0.25f);
+            Invoke(nameof(ResetOneTime), 0.25f);
         }
     }
 
-    private static void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void ChooseRandomKing()
+    {
+        int randomKingIndex = Random.Range(0, players.Count);
+        players.ElementAt(randomKingIndex).Value.IsKing = true;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Vérifier si la scène chargée est celle que nous attendons
         if (scene.name == "Main")
         {
-            // Création des nouveaux PlayerInput dans la nouvelle scène
-            int kingNbPlayer = UnityEngine.Random.Range(0, players.Count);
-            GameObject cinemachineTargetGroup = new GameObject("TargetGroup");
+            GameObject cinemachineTargetGroup = new("TargetGroup");
             CinemachineTargetGroup cinemachine = cinemachineTargetGroup.AddComponent<CinemachineTargetGroup>();
             for (int i = 0; i < players.Count; i++)
             {
-                bool isKing = kingNbPlayer == i;
-                GameObject nouveauJoueur = Instantiate(isKing?Instance.KingPlayer:Instance.FoolPlayer);
-                nouveauJoueur.name = (isKing?"King":"Fool") + (i + 1);
-                if(!isKing)
+                bool isKing = players.ElementAt(i).Value.IsKing;
+                GameObject newPlayer = Instantiate(isKing ? Instance.KingPlayer : Instance.FoolPlayer);
+                newPlayer.name = (isKing ? "King" : "Fool") + (i + 1);
+                if (!isKing)
                 {
-                    cinemachine.AddMember(nouveauJoueur.transform, 1f, 3f);
+                    cinemachine.AddMember(newPlayer.transform, 1f, 3f);
                 }
-                SceneManager.MoveGameObjectToScene(nouveauJoueur, scene);
             }
-            SceneManager.MoveGameObjectToScene(cinemachineTargetGroup, scene);
+            // SceneManager.MoveGameObjectToScene(cinemachineTargetGroup, scene);
 
             // Se désabonner de l'événement après l'avoir géré
             SceneManager.sceneLoaded -= OnSceneLoaded;

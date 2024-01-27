@@ -284,7 +284,6 @@ GameObject:
   - component: {fileID: 2742391777061241591}
   - component: {fileID: 4780724825003238475}
   - component: {fileID: 14564008062496214}
-  - component: {fileID: 8500463885210471711}
   m_Layer: 0
   m_Name: PlayerPanel
   m_TagString: Untagged
@@ -387,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57801914793786e45aaa3d84a744a003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 0
   playerNumberText: {fileID: 6830150503371734463}
   controllerText: {fileID: 8809823564112483612}
 --- !u!114 &14564008062496214
@@ -408,8 +408,8 @@ MonoBehaviour:
   m_DeviceLostEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8500463885210471711}
-        m_TargetAssemblyTypeName: AutoMove, Assembly-CSharp
+      - m_Target: {fileID: 4780724825003238475}
+        m_TargetAssemblyTypeName: PlayerPanel, Assembly-CSharp
         m_MethodName: Disconnect
         m_Mode: 1
         m_Arguments:
@@ -437,8 +437,8 @@ MonoBehaviour:
     m_ActionName: FoolsGameplay/Jump
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8500463885210471711}
-        m_TargetAssemblyTypeName: AutoMove, Assembly-CSharp
+      - m_Target: {fileID: 4780724825003238475}
+        m_TargetAssemblyTypeName: PlayerPanel, Assembly-CSharp
         m_MethodName: Disconnect
         m_Mode: 1
         m_Arguments:
@@ -472,18 +472,6 @@ MonoBehaviour:
   m_DefaultActionMap: FoolsGameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8500463885210471711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5162969970073940941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f80f9496c96c9e4db8e6f9df5ca8eb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5579878403076540242
 GameObject:
   m_ObjectHideFlags: 0
