@@ -1,29 +1,29 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DeathZone : Obstacle
 {
+    public bool isProcessing = false;
+    public float activationDuration = 1f;
     public override void Activate()
     {
         isActivated = true;
-        GetComponent<BoxCollider2D>().enabled = true;
     }
 
-    // Start is called before the first frame update
-
-    void Start()
+    private IEnumerator AddCollision()
     {
-
+        yield return new WaitForSeconds(activationDuration);
+        GetComponent<BoxCollider2D>().enabled = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-    }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-
+        if (isActivated && !isProcessing)
+        {
+            isProcessing = true;
+            GetComponent<BoxCollider2D>().enabled = true;
+            StartCoroutine(AddCollision());
+        }
     }
 }
