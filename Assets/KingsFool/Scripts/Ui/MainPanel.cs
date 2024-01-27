@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainPanel : MonoBehaviour
 {
     public static MainPanel Instance;
-    private int nbPlayer = 0;
+    public int nbPlayer = 0;
 
     private void Awake()
     {

@@ -451,6 +451,50 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &892149952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892149954}
+  - component: {fileID: 892149953}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &892149953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892149952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bbeb17b5d355b4bbe958f1603488be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &892149954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892149952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 319.50055, y: 330.7344, z: -8.67815}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993111089
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03281de7f7ca8d4d8b7278634d367e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nbPlayer: 0
 --- !u!1 &1162488922
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +688,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 993111090}
     m_Modifications:
+    - target: {fileID: 14564008062496214, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 892149953}
     - target: {fileID: 377005164632399769, guid: 0c501b77af0475a4c984ce0adece3093,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -911,6 +961,7 @@ RectTransform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 892149954}
   - {fileID: 832497193}
   - {fileID: 1162488925}
   - {fileID: 597026922}
