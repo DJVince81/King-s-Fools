@@ -2,9 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-
-
-public class RotateObject : Obstacles
+public class RotatingObject : Obstacle
 {
     public GameObject body;
     public bool directionToLeft = false;

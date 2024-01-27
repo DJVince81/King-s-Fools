@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class TranslationObject : Obstacles
+public class TranslatingObject : Obstacle
 {
     [SerializeField] private GameObject body, targetUpLine, targetPosition;
     private Renderer bodyRenderer;
