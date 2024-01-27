@@ -19,7 +19,19 @@ public class Player
     }
     private int playerNumber;
 
-    public PlayerInput PlayerInput { get; }
+    public PlayerInput PlayerInput
+    {
+        get => playerInput;
+        set
+        {
+            if (playerInput != value)
+            {
+                playerInput = value;
+                PlayerChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+    }
+    private PlayerInput playerInput;
 
     public bool IsKing
     {

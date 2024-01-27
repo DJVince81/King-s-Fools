@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
         players.Add(playerInput, player);
     }
 
+    public void RemovePlayer(PlayerInput playerInput)
+    {
+        players.Remove(playerInput);
+    }
+
     public void LaunchNewGame()
     {
         if (oneTime)
@@ -57,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Vérifier si la scène chargée est celle que nous attendons
+        // Vï¿½rifier si la scï¿½ne chargï¿½e est celle que nous attendons
         if (scene.name == "Main")
         {
             GameObject cinemachineTargetGroup = new("TargetGroup");
@@ -74,7 +79,7 @@ public class GameManager : MonoBehaviour
             }
             // SceneManager.MoveGameObjectToScene(cinemachineTargetGroup, scene);
 
-            // Se désabonner de l'événement après l'avoir géré
+            // Se dï¿½sabonner de l'ï¿½vï¿½nement aprï¿½s l'avoir gï¿½rï¿½
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
     }
