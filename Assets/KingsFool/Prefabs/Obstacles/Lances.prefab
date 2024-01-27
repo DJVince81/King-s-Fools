@@ -38,10 +38,35 @@ PrefabInstance:
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6371875403965391492, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
+      propertyPath: targetPosition
+      value: 
+      objectReference: {fileID: 231693367438753486}
+    - target: {fileID: 6371875403965391492, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
+      propertyPath: invisibleDuringTheLiffing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6707106873934981037, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
         type: 3}
       propertyPath: m_Name
       value: Lances
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348763932646059297, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348763932646059297, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8348763932646059297, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8348763932646059297, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
         type: 3}
@@ -98,3 +123,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb, type: 3}
+--- !u!1 &231693367438753486 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1086757015666014159, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 874767451050445057}
+  m_PrefabAsset: {fileID: 0}

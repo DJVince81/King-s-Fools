@@ -59,6 +59,10 @@ public class TranslationObject : Obstacles
 
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Activate();
+        }
         if (isActivated && !isMoving)
         {
             isMoving = true;
