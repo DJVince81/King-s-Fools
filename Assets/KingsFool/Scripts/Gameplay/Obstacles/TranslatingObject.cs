@@ -28,7 +28,7 @@ public class TranslatingObject : Obstacle
 
         while (Vector3.Distance(body.transform.position, targetPositionValue) > 0.01f)
         {
-            body.transform.position += direction * speed * Time.deltaTime;
+            body.transform.position += speed * Time.deltaTime * direction;
             yield return null;
         }
         StartCoroutine(AutomaticLifting());
@@ -46,7 +46,7 @@ public class TranslatingObject : Obstacle
 
         while (Vector3.Distance(body.transform.position, targetPosition) > 0.01f)
         {
-            body.transform.position += direction * speed * Time.deltaTime;
+            body.transform.position += speed * Time.deltaTime * direction;
             yield return null;
         }
         if (invisibleDuringTheLiffing)
