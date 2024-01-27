@@ -485,7 +485,7 @@ MonoBehaviour:
     m_ActionName: KingGameplay/Trap4[/XInputControllerWindows/dpad/left,/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: e99d78ac-d5da-40ed-948e-9a53bdb35308
+  m_DefaultActionMap: FoolsGameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!1 &5579878403076540242

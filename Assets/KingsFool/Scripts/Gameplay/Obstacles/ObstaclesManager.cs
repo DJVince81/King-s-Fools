@@ -37,7 +37,7 @@ public class ObstaclesManager : MonoBehaviour
 
     public void ActivateObstacle(int index)
     {
-        if (index < 0 || index >= obstacles.Count) return;
+        if (index < 0 || index >= visibleObstacles.Count) return;
         visibleObstacles[index].Activate();
     }
 
