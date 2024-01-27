@@ -163,6 +163,70 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 149363de-764a-418d-8b1d-e0dbf4fda236
     m_ActionName: KingGameplay/Trap4[/XInputControllerWindows/dpad/left,/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8504329829321128293}
+        m_TargetAssemblyTypeName: King, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 7f1bf412-8549-4664-9760-3d9aa616df03
+    m_ActionName: KingGameplay/Trap5[/XInputControllerWindows/dpad/left,/XInputControllerWindows1/dpad/left,/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8504329829321128293}
+        m_TargetAssemblyTypeName: King, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 722417ed-6bc1-480f-921f-6445a2224b06
+    m_ActionName: KingGameplay/Trap6[/XInputControllerWindows/dpad/right,/XInputControllerWindows1/dpad/right,/Keyboard/numpad6]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8504329829321128293}
+        m_TargetAssemblyTypeName: King, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a19a61d2-de2f-4348-98ce-44afbda7a657
+    m_ActionName: KingGameplay/Trap7[/XInputControllerWindows/dpad/left,/XInputControllerWindows1/dpad/left,/Keyboard/numpad7]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -8504329829321128293}
+        m_TargetAssemblyTypeName: King, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: aac2043f-c973-4482-b86b-bd26543689cc
+    m_ActionName: KingGameplay/Trap8[/XInputControllerWindows/dpad/up,/XInputControllerWindows1/dpad/up,/Keyboard/numpad8]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: KingGameplay
