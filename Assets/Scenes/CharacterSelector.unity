@@ -251,11 +251,11 @@ Transform:
   m_GameObject: {fileID: 597026921}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -960, y: -540, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 993111090}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &597026923
 MonoBehaviour:
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NotificationBehavior: 2
-  m_MaxPlayerCount: -1
+  m_MaxPlayerCount: 4
   m_AllowJoining: 1
   m_JoinBehavior: 0
   m_PlayerJoinedEvent:
@@ -471,7 +471,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 597026922}
   - {fileID: 6298105181502474746}
   m_Father: {fileID: 227716579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -840,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 5162969970073940941, guid: 0c501b77af0475a4c984ce0adece3093,
         type: 3}
       propertyPath: m_Name
-      value: PlayerPanel
+      value: Player1Panel
       objectReference: {fileID: 0}
     - target: {fileID: 8216172265335207465, guid: 0c501b77af0475a4c984ce0adece3093,
         type: 3}
@@ -877,6 +876,13 @@ PrefabInstance:
       propertyPath: mainPanel
       value: 
       objectReference: {fileID: 993111089}
+    - target: {fileID: 8809823564112483612, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_text
+      value: 'Keyboard
+
+        Press [Enter] to start the game!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4505667941664040720, guid: 0c501b77af0475a4c984ce0adece3093, type: 3}
@@ -895,4 +901,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 832497193}
   - {fileID: 1162488925}
+  - {fileID: 597026922}
   - {fileID: 227716579}
