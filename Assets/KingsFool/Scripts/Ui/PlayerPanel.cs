@@ -16,6 +16,7 @@ public class PlayerPanel : MonoBehaviour
     private void Start()
     {
         gameObject.transform.SetParent(MainPanel.Instance.transform);
+        gameObject.transform.localScale = Vector3.one;
         playerInput = GetComponent<PlayerInput>();
         MainPanel.Instance.AddPlayerPanel(this);
     }

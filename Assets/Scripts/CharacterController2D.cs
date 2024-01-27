@@ -118,7 +118,7 @@ public class CharacterController2D : MonoBehaviour
         UpdateVelocity();
         UpdateDirection();
         UpdateJump();
-        UpdateTailPose();
+        if (tailAnchor != null) UpdateTailPose();
         UpdateGravityScale();
 
         prevVelocity = controllerRigidbody.velocity;
