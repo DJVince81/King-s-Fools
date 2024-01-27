@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 2742391777061241591}
   - component: {fileID: 4780724825003238475}
   - component: {fileID: 14564008062496214}
+  - component: {fileID: 8881065613128270580}
   m_Layer: 0
   m_Name: PlayerPanel
   m_TagString: Untagged
@@ -415,35 +416,11 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4780724825003238475}
-        m_TargetAssemblyTypeName: PlayerPanel, Assembly-CSharp
-        m_MethodName: Initialize
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 92afca80-d608-4488-a4c5-f4864b8cdbe4
     m_ActionName: FoolsGameplay/Move
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4780724825003238475}
-        m_TargetAssemblyTypeName: PlayerPanel, Assembly-CSharp
-        m_MethodName: Initialize
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 9d0f9fd0-207a-45c0-aa3b-a51590a2d8b2
     m_ActionName: FoolsGameplay/Jump
   m_NeverAutoSwitchControlSchemes: 1
@@ -451,6 +428,18 @@ MonoBehaviour:
   m_DefaultActionMap: FoolsGameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8881065613128270580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5162969970073940941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f80f9496c96c9e4db8e6f9df5ca8eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5579878403076540242
 GameObject:
   m_ObjectHideFlags: 0
