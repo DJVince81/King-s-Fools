@@ -13,6 +13,7 @@ public class AutoMove : MonoBehaviour
     {
         gameObject.transform.SetParent(MainPanel.Instance.transform);
         gameObject.transform.localScale = Vector3.one;
+        MainPanel.Instance.AddPlayer(gameObject);
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class AutoMove : MonoBehaviour
 
     public void Disconnect()
     {
-        Debug.Log("Disconnect");
         Destroy(gameObject);
+        MainPanel.Instance.RemovePlayer();
     }
 }
