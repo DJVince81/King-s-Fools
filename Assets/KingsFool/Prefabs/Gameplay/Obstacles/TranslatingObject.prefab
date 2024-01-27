@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 6858651235941667415}
   targetUpLine: {fileID: 8351736454312111434}
-  targetPosition: {fileID: 0}
+  targetPosition: {fileID: 1086757015666014159}
   speed: 1
   AutomaticLiftingDelay: 1
   invisibleDuringTheLiffing: 0
