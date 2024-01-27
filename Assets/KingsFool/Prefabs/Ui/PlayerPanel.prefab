@@ -407,7 +407,19 @@ MonoBehaviour:
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8881065613128270580}
+        m_TargetAssemblyTypeName: AutoMove, Assembly-CSharp
+        m_MethodName: Disconnect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_DeviceRegainedEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -423,6 +435,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9d0f9fd0-207a-45c0-aa3b-a51590a2d8b2
     m_ActionName: FoolsGameplay/Jump
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8881065613128270580}
+        m_TargetAssemblyTypeName: AutoMove, Assembly-CSharp
+        m_MethodName: Disconnect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a24551c6-4024-4ead-83b1-7f3ecff64fa6
+    m_ActionName: FoolsGameplay/Disconnect[/XInputControllerWindows/start,/XInputControllerWindows1/start]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: FoolsGameplay
