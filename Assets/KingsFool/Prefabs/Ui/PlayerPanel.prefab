@@ -387,8 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57801914793786e45aaa3d84a744a003, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumberText: {fileID: 0}
-  controllerText: {fileID: 0}
+  playerNumberText: {fileID: 6830150503371734463}
+  controllerText: {fileID: 8809823564112483612}
 --- !u!114 &14564008062496214
 MonoBehaviour:
   m_ObjectHideFlags: 0
