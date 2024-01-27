@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
+using Cinemachine;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +18,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (Instance == null)
+        {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         else
             Destroy(gameObject);
     }
@@ -63,25 +63,24 @@ public class GameManager : MonoBehaviour
         if (scene.name == "Main")
         {
             // Création des nouveaux PlayerInput dans la nouvelle scène
-            bool kingSpawned = false;
+            int kingNbPlayer = UnityEngine.Random.Range(0, players.Count);
+            GameObject cinemachineTargetGroup = new GameObject("TargetGroup");
+            CinemachineTargetGroup cinemachine = cinemachineTargetGroup.AddComponent<CinemachineTargetGroup>();
             for (int i = 0; i < players.Count; i++)
             {
-                bool isKing = (UnityEngine.Random.Range(0, 10) > 7) && !kingSpawned;
+                bool isKing = kingNbPlayer == i;
                 GameObject nouveauJoueur = Instantiate(isKing?Instance.KingPlayer:Instance.FoolPlayer);
                 nouveauJoueur.name = (isKing?"King":"Fool") + (i + 1);
+                if(!isKing)
+                {
+                    cinemachine.AddMember(nouveauJoueur.transform, 1f, 3f);
+                }
                 SceneManager.MoveGameObjectToScene(nouveauJoueur, scene);
             }
+            SceneManager.MoveGameObjectToScene(cinemachineTargetGroup, scene);
 
             // Se désabonner de l'événement après l'avoir géré
             SceneManager.sceneLoaded -= OnSceneLoaded;
-        }
-    }
-
-    private void LoadPlayers()
-    {
-        for (int i = 0; i < players.Count; i++)
-        {
-            Debug.Log(players[i].gameObject.name);
         }
     }
 
