@@ -6,6 +6,7 @@ public class Slasher : Obstacle
 {
 
     public GameObject g;
+    public Animator animator;
     public bool used;
     public int i;
 
@@ -20,6 +21,7 @@ public class Slasher : Obstacle
         if (this.isActivated)
         {
             used = true;
+            animator.SetBool("order", true);
         }
         if(used)
         {
@@ -30,6 +32,7 @@ public class Slasher : Obstacle
             g.SetActive(true);
             used = false;
             i = 0;
+            animator.SetBool("order", false);
         }
     }
 }
