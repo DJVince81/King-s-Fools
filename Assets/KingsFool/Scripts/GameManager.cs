@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject FoolPlayer;
     [SerializeField] private GameObject KingPlayer;
-    [SerializeField] private float countdownDuration = 120f;
+    [SerializeField] private float countdownDuration = 10f;
 
     private bool oneTime = true;
     private bool isGameRunning = false;
@@ -46,6 +46,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    public void ResetPlayers()
+    {
+        players.Clear();
+    }
+
     public void AddPlayer(InputDevice InputDevice, Player player)
     {
         players.Add(InputDevice, player);
@@ -61,9 +66,9 @@ public class GameManager : MonoBehaviour
         if (oneTime)
         {
             oneTime = false;
-            ChooseRandomKing();
             if (players.Count >= 2)
             {
+                ChooseRandomKing();
                 SceneManager.sceneLoaded += OnSceneLoaded;
                 SceneManager.LoadScene("Main");
             }
@@ -119,7 +124,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (isGameRunning)
         {
@@ -140,7 +145,8 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        //
+        ResetPlayers();
+        SceneManager.LoadScene("CharacterSelection");
     }
 
     private void ResetOneTime()

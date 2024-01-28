@@ -491,7 +491,7 @@ MonoBehaviour:
     type: 3}
   KingPlayer: {fileID: 8206951321083667264, guid: 08bcb570b85e2ae40b999658c516eb46,
     type: 3}
-  countdownDuration: 120
+  countdownDuration: 150
 --- !u!4 &892149954
 Transform:
   m_ObjectHideFlags: 0
