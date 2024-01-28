@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour
 
     private void StartGame()
     {
+        checkpointPosition = new Vector3(-51.46f, -0.5f, 1);
         TimeLeft = countdownDuration;
         isGameRunning = true;
     }
