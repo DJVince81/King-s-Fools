@@ -4,7 +4,11 @@ using UnityEngine;
 public class MainPanel : MonoBehaviour
 {
     public static MainPanel Instance;
+
+    [SerializeField] Color[] playerColors;
+
     private List<PlayerPanel> playerPanels;
+
 
     private void Awake()
     {

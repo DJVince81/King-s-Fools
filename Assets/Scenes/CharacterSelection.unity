@@ -486,10 +486,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bbeb17b5d355b4bbe958f1603488be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointPosition: {x: 0, y: 0, z: 0}
   FoolPlayer: {fileID: 2638879086307866348, guid: 3decab041ef504f48960689f0f84256a,
     type: 3}
   KingPlayer: {fileID: 8206951321083667264, guid: 08bcb570b85e2ae40b999658c516eb46,
     type: 3}
+  countdownDuration: 120
 --- !u!4 &892149954
 Transform:
   m_ObjectHideFlags: 0
@@ -592,7 +594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.44962996, g: 0.83396226, b: 0.40754002, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -621,6 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03281de7f7ca8d4d8b7278634d367e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerColors: []
 --- !u!1 &1072783136
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +898,26 @@ PrefabInstance:
     - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,
         type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 834883170977353114, guid: 0c501b77af0475a4c984ce0adece3093,

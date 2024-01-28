@@ -10,11 +10,24 @@ public class DeathHandler : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerDeath"))
         {
-            Debug.Log("Player died");
-            playerSprite.SetActive(false);
-            player.GetComponent<Rigidbody2D>().simulated = false;
-            StartCoroutine(RespawnPlayer());
+            Die();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (player.transform.position.y < -8f)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("Player died");
+        playerSprite.SetActive(false);
+        player.GetComponent<Rigidbody2D>().simulated = false;
+        StartCoroutine(RespawnPlayer());
     }
 
     private IEnumerator RespawnPlayer()

@@ -387,8 +387,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDisconnected: 0
+  playerImage: {fileID: 251432904078945100}
+  panelBackground: {fileID: 785321495591717606}
   playerNumberText: {fileID: 6830150503371734463}
   controllerText: {fileID: 8809823564112483612}
+  playerColors:
+  - {r: 0.71599996, g: 0.370172, b: 0.370172, a: 1}
+  - {r: 0.36862746, g: 0.42963865, b: 0.7176471, a: 1}
+  - {r: 0.36862746, g: 0.7176471, b: 0.42797613, a: 1}
+  - {r: 0.7785303, g: 0.792, b: 0.343728, a: 1}
+  jesterSprite: {fileID: 21300000, guid: d43bdf3fd5a167144932d608f4c48bfd, type: 3}
+  kingSprite: {fileID: 21300000, guid: 1aeabfab064002f45ad1868b9e8f0239, type: 3}
 --- !u!114 &14564008062496214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,8 +540,8 @@ RectTransform:
   m_GameObject: {fileID: 5579878403076540242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2388229465157806231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -563,14 +572,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2691492984016111979, guid: e8e76501ba71a9f49949fe68f9896f18,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: d43bdf3fd5a167144932d608f4c48bfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
