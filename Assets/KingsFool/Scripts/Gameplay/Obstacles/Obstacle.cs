@@ -11,7 +11,7 @@ public abstract class Obstacle : MonoBehaviour
             if (isVisible != value)
             {
                 isVisible = value;
-                Debug.Log("Obstacle " + gameObject.name + " is now " + (isVisible ? "visible" : "invisible"));
+                // Debug.Log("Obstacle " + gameObject.name + " is now " + (isVisible ? "visible" : "invisible"));
                 ObstacleVisibilityChanged?.Invoke(this, EventArgs.Empty);
             }
         }
