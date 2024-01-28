@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bbeb17b5d355b4bbe958f1603488be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointPosition: {x: 0, y: 0, z: 0}
+  checkpointPosition: {x: -51.46, y: -0.5, z: 1}
   FoolPlayer: {fileID: 2638879086307866348, guid: 3decab041ef504f48960689f0f84256a,
     type: 3}
   KingPlayer: {fileID: 8206951321083667264, guid: 08bcb570b85e2ae40b999658c516eb46,
