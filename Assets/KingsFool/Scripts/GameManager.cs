@@ -1,25 +1,41 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Vector3 checkpointPosition;
+    public float TimeLeft
+    {
+        get => timeLeft;
+        set
+        {
+            if (timeLeft != value)
+            {
+                timeLeft = value;
+            }
+        }
+    }
+    private float timeLeft;
 
     [SerializeField] private GameObject FoolPlayer;
     [SerializeField] private GameObject KingPlayer;
+    [SerializeField] private float countdownDuration = 120f;
 
     private bool oneTime = true;
+    private bool isGameRunning = false;
 
     private Dictionary<InputDevice, Player> players;
 
     private void Awake()
     {
-        Random.InitState(System.DateTime.Now.Millisecond);
+        UnityEngine.Random.InitState(DateTime.Now.Millisecond);
         if (Instance == null)
         {
             Instance = this;
@@ -55,9 +71,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void LaunchNewGame(GameObject winner)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players.ElementAt(i).Value.IsKing = false;
+        }
+        players[winner.GetComponent<PlayerInput>().devices[0]].IsKing = true;
+        if (players.Count >= 2)
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene("Main");
+        }
+    }
+
     private void ChooseRandomKing()
     {
-        int randomKingIndex = Random.Range(0, players.Count);
+        int randomKingIndex = UnityEngine.Random.Range(0, players.Count);
         players.ElementAt(randomKingIndex).Value.IsKing = true;
     }
 
@@ -82,9 +112,35 @@ public class GameManager : MonoBehaviour
                 }
             }
 
+            StartGame();
+
             // Se d�sabonner de l'�v�nement apr�s l'avoir g�r�
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
+    }
+
+    private void Update()
+    {
+        if (isGameRunning)
+        {
+            TimeLeft -= Time.deltaTime;
+            if (TimeLeft <= 0f)
+            {
+                isGameRunning = false;
+                EndGame();
+            }
+        }
+    }
+
+    private void StartGame()
+    {
+        TimeLeft = countdownDuration;
+        isGameRunning = true;
+    }
+
+    private void EndGame()
+    {
+        //
     }
 
     private void ResetOneTime()

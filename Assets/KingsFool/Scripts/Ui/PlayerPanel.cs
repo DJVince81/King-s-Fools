@@ -2,14 +2,20 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(PlayerInput))]
 public class PlayerPanel : MonoBehaviour
 {
     public Player player;
-    public bool isDisconnected = false;
+    [HideInInspector] public bool isDisconnected = false;
+    [SerializeField] Image playerImage;
+    [SerializeField] RawImage panelBackground;
     [SerializeField] TMP_Text playerNumberText;
     [SerializeField] TMP_Text controllerText;
+    [SerializeField] Color[] playerColors;
+    [SerializeField] Sprite jesterSprite;
+    [SerializeField] Sprite kingSprite;
 
     private PlayerInput playerInput;
 
@@ -29,12 +35,14 @@ public class PlayerPanel : MonoBehaviour
         GameManager.Instance.AddPlayer(inputDevice, player);
         player.PlayerNumber = playerNumber;
         playerNumberText.text = $"Player {playerNumber}";
+        panelBackground.color = playerColors[playerNumber - 1];
         controllerText.text = inputDevice.name;
     }
 
-    private void ChangeTextColor(bool isKing)
+    private void SetAsKing(bool isKing)
     {
         playerNumberText.color = isKing ? Color.yellow : Color.white;
+        playerImage.sprite = isKing ? kingSprite : jesterSprite;
     }
 
     private void ChangePlayerNumber(int playerNumber)
@@ -56,7 +64,7 @@ public class PlayerPanel : MonoBehaviour
     {
         if (sender is Player player)
         {
-            ChangeTextColor(player.IsKing);
+            SetAsKing(player.IsKing);
             ChangePlayerNumber(player.PlayerNumber);
         }
     }
