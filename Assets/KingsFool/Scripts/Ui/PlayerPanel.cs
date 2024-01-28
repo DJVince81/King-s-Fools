@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,6 +26,8 @@ public class PlayerPanel : MonoBehaviour
         gameObject.transform.localScale = Vector3.one;
         playerInput = GetComponent<PlayerInput>();
         MainPanel.Instance.AddPlayerPanel(this);
+        playerInput.actionEvents[3].RemoveAllListeners();
+        playerInput.actionEvents[3].AddListener((InputAction.CallbackContext context) => { GameManager.Instance.LaunchNewGame(); });
     }
 
     public void Initialize(int playerNumber)

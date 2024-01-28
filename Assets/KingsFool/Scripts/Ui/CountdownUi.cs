@@ -11,7 +11,7 @@ public class CountdownUi : MonoBehaviour
         text = GetComponent<TMP_Text>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         float timeLeft = GameManager.Instance.TimeLeft;
         int minutes = (int)timeLeft / 60;
