@@ -5,34 +5,32 @@ using UnityEngine;
 public class Slasher : Obstacle
 {
 
-    public GameObject g;
+    public GameObject boxCollider;
     public Animator animator;
-    public bool used;
-    public int i;
-
-    void Start()
-    {
-        used = false;
-        i = 0;
-    }
+    public int timer;
 
     void Update()
     {
         if (this.isActivated)
         {
-            used = true;
             animator.SetBool("order", true);
+            this.isActivated = false;
         }
-        if(used)
+        if(animator.GetBool("order"))
         {
-            i++;
+            timer++;
         }
-        if (i == 10)
+        if (timer >= 300)
         {
-            g.SetActive(true);
-            used = false;
-            i = 0;
-            animator.SetBool("order", false);
+            if(animator.GetBool("order"))
+            {
+                boxcollider.SetActive(true);
+                animator.SetBool("order", false);
+            } else
+            {
+                timer = 0;
+                boxcollider.SetActive(false);
+            }
         }
     }
 }

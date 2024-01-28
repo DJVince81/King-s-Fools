@@ -17741,7 +17741,7 @@ PrefabInstance:
     - target: {fileID: 919055975242413355, guid: ac21f13e23d891743bb2c219beafa1fa,
         type: 3}
       propertyPath: m_Name
-      value: seesaw (1)
+      value: Middle Seesaw
       objectReference: {fileID: 0}
     - target: {fileID: 3208996255224840774, guid: ac21f13e23d891743bb2c219beafa1fa,
         type: 3}
@@ -17899,7 +17899,7 @@ PrefabInstance:
     - target: {fileID: 919055975242413355, guid: ac21f13e23d891743bb2c219beafa1fa,
         type: 3}
       propertyPath: m_Name
-      value: seesaw
+      value: Seesaw
       objectReference: {fileID: 0}
     - target: {fileID: 3208996255224840774, guid: ac21f13e23d891743bb2c219beafa1fa,
         type: 3}
@@ -18018,7 +18018,12 @@ PrefabInstance:
     - target: {fileID: 6075002641539689349, guid: 6add6b58d7a574b40a1c3bc4f497c066,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6075002641539689349, guid: 6add6b58d7a574b40a1c3bc4f497c066,
+        type: 3}
+      propertyPath: invisibleDuringTheLiffing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9206651020033893451, guid: 6add6b58d7a574b40a1c3bc4f497c066,
         type: 3}
@@ -45251,7 +45256,7 @@ PrefabInstance:
     - target: {fileID: 6075002641539689349, guid: 6add6b58d7a574b40a1c3bc4f497c066,
         type: 3}
       propertyPath: speed
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 9206651020033893451, guid: 6add6b58d7a574b40a1c3bc4f497c066,
         type: 3}
