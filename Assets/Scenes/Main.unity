@@ -356,7 +356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!1 &156471972
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,7 +496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &156471976
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -874,7 +872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &398015312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1227,7 +1224,6 @@ GameObject:
   - component: {fileID: 580778905}
   - component: {fileID: 580778907}
   - component: {fileID: 580778906}
-  - component: {fileID: 580778908}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1317,27 +1313,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580778904}
   m_CullTransparentMesh: 1
---- !u!114 &580778908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 580778904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textList:
-  - {fileID: 136540376}
-  - {fileID: 156471974}
-  - {fileID: 1475256400}
-  - {fileID: 876694921}
-  - {fileID: 783642624}
-  - {fileID: 398015310}
-  - {fileID: 2071136248}
-  - {fileID: 832924024}
 --- !u!1001 &605318951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1956,7 +1931,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &783642626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2105,7 +2079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &832924026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2254,7 +2227,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &876694923
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3785,7 +3757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &1475256402
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14560,7 +14531,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f01273a863511345aaf36a92e84a579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugTextScriptPanel: {fileID: 580778908}
+  textList:
+  - {fileID: 136540376}
+  - {fileID: 156471974}
+  - {fileID: 1475256400}
+  - {fileID: 876694921}
+  - {fileID: 783642624}
+  - {fileID: 398015310}
+  - {fileID: 2071136248}
+  - {fileID: 832924024}
 --- !u!4 &1899212482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 727782449407591130, guid: 4bedf3127b3e64580bd112a7a1f4244c,
@@ -14894,7 +14873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d444cfa239d21b47a507131a26f3b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textList: []
 --- !u!222 &2071136250
 CanvasRenderer:
   m_ObjectHideFlags: 0
