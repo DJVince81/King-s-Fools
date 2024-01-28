@@ -18,11 +18,13 @@ public abstract class Obstacle : MonoBehaviour
     }
     private bool isVisible;
     public event EventHandler ObstacleVisibilityChanged;
+    [SerializeField] AudioClip activationSound = null;
 
     protected bool isActivated;
     public void Activate()
     {
         Debug.Log("Activating obstacle " + gameObject.name);
         isActivated = true;
+        if (activationSound != null) SfxPlayer.instance.Play(activationSound);
     }
 }

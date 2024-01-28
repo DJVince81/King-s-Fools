@@ -91,6 +91,11 @@ PrefabInstance:
       objectReference: {fileID: 231693367438753486}
     - target: {fileID: 6371875403965391492, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
         type: 3}
+      propertyPath: activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0233a7abcc219374888aa6616e4c1377, type: 3}
+    - target: {fileID: 6371875403965391492, guid: 2040cde2c627e6a4d9e5fdd6e6e854cb,
+        type: 3}
       propertyPath: invisibleDuringTheLiffing
       value: 1
       objectReference: {fileID: 0}

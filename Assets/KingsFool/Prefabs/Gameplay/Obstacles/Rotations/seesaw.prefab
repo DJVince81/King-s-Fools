@@ -134,6 +134,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8886231349174931528, guid: 39aff8f9e55e60748a04f3845d664058,
+        type: 3}
+      propertyPath: activationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ac316e0d519496943a5bb38923a05e9b, type: 3}
     m_RemovedComponents:
     - {fileID: 3722583410691883378, guid: 39aff8f9e55e60748a04f3845d664058, type: 3}
     m_RemovedGameObjects: []
