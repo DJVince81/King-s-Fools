@@ -11,17 +11,7 @@ public class ObstaclesManager : MonoBehaviour
 
     [SerializeField] private List<TMP_Text> textList;
 
-    private static readonly string[] trapControls = new string[]
-    {
-        "1/A",
-        "2/B",
-        "3/X",
-        "4/Y",
-        "5/↓",
-        "6/↑",
-        "7/→",
-        "8/←",
-    };
+    private const int MAX_CONTROLS = 8;
 
     private void Awake()
     {
@@ -63,12 +53,24 @@ public class ObstaclesManager : MonoBehaviour
             if (!visibleObstacles.Contains(obstacle)) visibleObstacles.Add(obstacle);
         }
         else
-            visibleObstacles.Remove(obstacle);
-
-        int maxControls = Mathf.Min(obstacles.Count, trapControls.Length);
-        for (int i = 0; i < maxControls; i++)
         {
-            textList[i].text = (i >= obstacles.Count) ? "-----" : obstacles[i].gameObject.name;
+            if (visibleObstacles.Contains(obstacle)) visibleObstacles.Remove(obstacle);
         }
+        SortVisibleObstaclesByXPosition();
+        if (visibleObstacles.Count > MAX_CONTROLS)
+        {
+            visibleObstacles.RemoveAt(0);
+        }
+
+        int currentControlsAmount = Mathf.Min(visibleObstacles.Count, MAX_CONTROLS);
+        for (int i = 0; i < MAX_CONTROLS; i++)
+        {
+            textList[i].text = (i < currentControlsAmount) ? visibleObstacles[i].gameObject.name : "";
+        }
+    }
+
+    private void SortVisibleObstaclesByXPosition()
+    {
+        visibleObstacles.Sort((a, b) => a.transform.position.x.CompareTo(b.transform.position.x));
     }
 }

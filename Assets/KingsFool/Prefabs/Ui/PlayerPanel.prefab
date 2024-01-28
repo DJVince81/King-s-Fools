@@ -75,8 +75,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -210,8 +210,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -334,7 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6528301, g: 0.28453538, b: 0.28453538, a: 1}
+  m_Color: {r: 0.6509804, g: 0.5029898, b: 0.38431373, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -483,6 +483,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 149363de-764a-418d-8b1d-e0dbf4fda236
     m_ActionName: KingGameplay/Trap4[/XInputControllerWindows/dpad/left,/Keyboard/4]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7f1bf412-8549-4664-9760-3d9aa616df03
+    m_ActionName: KingGameplay/Trap5[/SwitchProControllerHID/dpad/down,/Keyboard/5]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 722417ed-6bc1-480f-921f-6445a2224b06
+    m_ActionName: KingGameplay/Trap6[/SwitchProControllerHID/dpad/up,/Keyboard/6]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a19a61d2-de2f-4348-98ce-44afbda7a657
+    m_ActionName: KingGameplay/Trap7[/SwitchProControllerHID/dpad/right,/Keyboard/7]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: aac2043f-c973-4482-b86b-bd26543689cc
+    m_ActionName: KingGameplay/Trap8[/SwitchProControllerHID/dpad/left,/Keyboard/8]
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: FoolsGameplay
