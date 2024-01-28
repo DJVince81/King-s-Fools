@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
                 newPlayer.GetComponent<PlayerInput>().SwitchCurrentControlScheme(player.InputDevice);
                 if (!isKing)
                 {
-                    cinemachine.AddMember(newPlayer.transform, 1f, 3f);
+                    cinemachine.AddMember(newPlayer.transform, 1f, 5f);
                 }
             }
 
