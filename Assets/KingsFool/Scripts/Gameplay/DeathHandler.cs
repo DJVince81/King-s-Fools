@@ -16,7 +16,7 @@ public class DeathHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player.transform.position.y < -8f)
+        if (player.transform.position.y < -15f)
         {
             Die();
         }
