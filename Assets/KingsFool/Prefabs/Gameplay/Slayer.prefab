@@ -595,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7238794889256238244}
   - component: {fileID: 6214154589993181016}
+  - component: {fileID: 3991645693760112321}
   m_Layer: 0
   m_Name: Slayer
   m_TagString: Untagged
@@ -631,10 +632,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98d942179e4d40148bb0ec02754fcf12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  g: {fileID: 1304929872090562276}
+  boxCollider: {fileID: 1304929872090562276}
   animator: {fileID: 7397893592377223429}
-  used: 0
-  i: 0
+  timer: 0
+--- !u!61 &3991645693760112321
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7221107457698866387}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.40537643, y: 1.0727973}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.81720734, y: 2.2299776}
+  m_EdgeRadius: 0
 --- !u!1001 &502053426242426952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,6 +897,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7397893592377223429}
+    - targetCorrespondingSourceObject: {fileID: 2392038347325359717, guid: cbecf42218a2a04438dd62175482cbb2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6858435445298702486}
   m_SourcePrefab: {fileID: 4843985084834002234, guid: cbecf42218a2a04438dd62175482cbb2,
     type: 3}
 --- !u!1 &76676855723997685 stripped
@@ -944,6 +993,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 502053426242426952}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2865869199820086829 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2392038347325359717, guid: cbecf42218a2a04438dd62175482cbb2,
+    type: 3}
+  m_PrefabInstance: {fileID: 502053426242426952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6858435445298702486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865869199820086829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c7c15e03c023454abd5eae924a91819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacle: {fileID: 6214154589993181016}
 --- !u!4 &4809612004435934025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4303037381328952575, guid: cbecf42218a2a04438dd62175482cbb2,

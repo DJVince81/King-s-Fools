@@ -9,12 +9,13 @@ public class Slasher : Obstacle
     public Animator animator;
     public int timer;
 
-    void Update()
+    void FixedUpdate()
     {
         if (this.isActivated)
         {
             animator.SetBool("order", true);
             this.isActivated = false;
+            timer = 0;
         }
         if(animator.GetBool("order"))
         {
@@ -24,12 +25,11 @@ public class Slasher : Obstacle
         {
             if(animator.GetBool("order"))
             {
-                boxcollider.SetActive(true);
+                boxCollider.SetActive(true);
                 animator.SetBool("order", false);
             } else
             {
-                timer = 0;
-                boxcollider.SetActive(false);
+                boxCollider.SetActive(false);
             }
         }
     }
