@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -67,6 +68,20 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene("Main");
             }
             Invoke(nameof(ResetOneTime), 0.25f);
+        }
+    }
+
+    public void LaunchNewGame(GameObject winner)
+    {
+        for (int i = 0; i < players.Count; i++)
+        {
+            players.ElementAt(i).Value.IsKing = false;
+        }
+        players[winner.GetComponent<PlayerInput>().devices[0]].IsKing = true;
+        if (players.Count >= 2)
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.LoadScene("Main");
         }
     }
 
